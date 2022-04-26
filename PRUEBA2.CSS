@@ -1,0 +1,384 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em;}
+h6{
+    text-align: center;
+    font-size: 1vh;
+    border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-top-color: rgba(255,255,255,1.5);
+}
+p{font-size: 1.25em;}
+
+header{    
+    padding: 1em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    height: 20vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.3)
+    )
+}
+ul{
+    width: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+li{
+    padding: 1em;
+    margin:0 2em 0 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 30px;    
+    transition: all .5s ease;
+}
+#indice{
+	color: #FFF;
+	transition: all 0.3s;
+	position: relative;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#indice span {
+	transition: all 0.3s;
+}
+#indice::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.3s;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-top-color: rgba(255,255,255,0.5);
+	transform: scale(0.1, 1);
+}
+#indice:hover span {
+	letter-spacing: 5px;
+}
+#indice:hover::before {
+	opacity: 1;	
+	transform: scale(1, 1);	
+}
+#indice::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	transition: all 0.3s;
+}
+#indice:hover::after {
+	opacity: 5;	
+	transform: scale(0.1, 1);
+}
+#indice:hover{
+    background-color:#646262;
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+.color-acento{
+    color:rgb(24, 24, 24);
+    font-weight: bold;
+}
+#hero{
+    min-height: 110vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    );
+     background-repeat: no repeat;
+     background-size: cover;
+     background-position: center center;
+}
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#hero h1{
+    color:white;
+}
+
+#sobre-nosotros{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    text-align: center;
+    flex-direction: column;
+    height: 100vh;
+    color: white;
+    background-image: linear-gradient(
+        270deg,
+        rgba(0,0,0,0.0),
+        rgba(0,0,0,0)
+    )
+     ,url("Tecam_P2006t.jpg");
+     background-repeat: no repeat;
+     background-size: cover;
+     background-position: center center;
+}
+#sn{
+    position: absolute;    
+    margin: 2vh;
+    height: auto;
+    width: 350px;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 100px;
+    font-size: 2vh;
+    letter-spacing: 2px;
+}
+#nuestra-flota{
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    text-align: center;
+    height: 100vh;
+    color: white;
+    background-image: linear-gradient(
+        90deg,
+        rgba(0,0,0,0.0),
+        rgba(0,0,0,0.0)
+    )
+     ,url("N294CM-1.jpeg");
+     background-repeat: no repeat;
+     background-size: cover;
+     background-position: center center;
+}
+#nf{
+    position: absolute;
+    margin: 2vh;
+    height: auto;
+    width: 60vh;
+    padding: 10px;
+    background-color: rgba(0,0,0, .2);
+    border-radius: 100px;
+    font-size: 2vh;    
+    letter-spacing: 2px;
+}
+#planifica-tu-vuelo{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    text-align: justify;
+    height: auto;
+    color: white;
+    background-image: linear-gradient(
+        270deg,
+        rgba(0,0,0,0.0),
+        rgba(0,0,0,0.0)
+)
+     ,url("planifica\ tu\ vuelo.jpg");
+     background-repeat: no repeat;
+     background-size: cover;
+     background-position: center center;
+}
+
+#multileg{
+    display: inline-block;
+}
+h2{
+    margin: 0 0 30px;
+    padding: 0;
+    font-size: 40px;
+    color: #d7dddf;
+    text-align: center;
+}
+h3{
+    margin: 0 0 30px;
+    padding: 0;
+    font-size: 15px;
+    color: #d7dddf;
+    text-align: center;
+}
+
+
+#button-up{
+    width:60px;
+    height: 60px;
+    background: #646262;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+    border: 4px solid transparent;    
+    transition: all 300ms ease;
+    transform: scale(0);
+}
+#button-up:hover{
+    transform: scale(1.1);
+    border-color: rgba (0,0,0,0, 0.1);
+}
+
+.tabs{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
+    left:.3vh;
+    margin: 2vh;
+    height: auto;
+    width: 60vh;
+    padding: 10px;
+    background-color: rgba(0,0,0, .5);
+    border-radius: 30px;
+    font-size: 2vh;    
+    letter-spacing: 2.5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  .tabs__label{
+	color: #FFF;
+	transition: all 0.3s;
+	position: relative;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.tabs__label span {
+	transition: all 0.3s;
+    background-color:#646262;
+}
+.tabs__label::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.3s;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-top-color: rgba(255,255,255,0.5);
+	transform: scale(0.1, 1);    
+    cursor: pointer;
+}
+
+.tabs__label:hover::before {
+	opacity: 1;	
+	transform: scale(1, 1);	
+}
+
+.tabs__label:hover::after {
+	opacity: 5;	
+	transform: scale(0.1, 1);
+    background-color:#646262;
+}
+.tabs__label:hover{
+    background-color:#646262;
+}
+  .elemento{
+      color: whitesmoke;
+      font-weight: bold;
+      font-size: 2.5vh;   
+      letter-spacing: 1px; 
+  }
+  input{
+    width: 100%;
+    padding: 8px 0;
+    border-radius: 10px;
+    color: white;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+    border-top:  1px solid whitesmoke;
+    border-right:  1px solid whitesmoke;
+    border-left:  1px solid whitesmoke;
+}
+#boton{
+    width: 100%;
+    padding: 8px 0;
+    border-radius: 10px;
+    color: white;
+    background-color: #646262;
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+    border-top:  1px solid whitesmoke;
+    border-right:  1px solid whitesmoke;
+    border-left:  1px solid whitesmoke;
+}
+#boton:hover{
+    background-color: #1f1e1e;
+}
+    
+  .tabs__radio {
+    display: none;
+  }
+
+
+  
+  .tabs__content {
+    order: 1;
+    width: 100%;
+    line-height: 1.5;
+    font-size: 0.9em;
+    display: none;
+    border-radius: 30px;
+  }
+  
+  .tabs__radio:checked + .tabs__label {
+    font-weight: bold;
+    color: white;
+    font-size: 2vh;    
+    letter-spacing: .5;
+    background-color:#646262;
+  }
+  
+  .tabs__radio:checked + .tabs__label + .tabs__content {
+    display: initial;
+    
+  }
